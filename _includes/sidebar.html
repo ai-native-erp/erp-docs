@@ -1,0 +1,52 @@
+<div class="sidebar-section">
+  <h3>Retail flows</h3>
+  <ul>
+    {% assign flow_pages = site.pages | where: "layout", "flow" | sort: "nav_order" %}
+    {% for p in flow_pages %}
+      <li><a href="{{ p.url | relative_url }}">{{ p.nav_title | default: p.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="sidebar-section">
+  <h3>Module groups</h3>
+  <ul>
+    <li><a href="{{ '/modules/#core' | relative_url }}">Core</a></li>
+    <li><a href="{{ '/modules/#sales' | relative_url }}">Sales</a></li>
+    <li><a href="{{ '/modules/#purchase' | relative_url }}">Purchase</a></li>
+    <li><a href="{{ '/modules/#stock' | relative_url }}">Stock</a></li>
+    <li><a href="{{ '/modules/#accounting' | relative_url }}">Accounting</a></li>
+    <li><a href="{{ '/modules/#pos' | relative_url }}">POS</a></li>
+    <li><a href="{{ '/modules/#product' | relative_url }}">Product</a></li>
+    <li><a href="{{ '/modules/#manufacturing' | relative_url }}">Manufacturing</a></li>
+    <li><a href="{{ '/modules/#hr' | relative_url }}">HR</a></li>
+    <li><a href="{{ '/modules/#localization' | relative_url }}">Localization (incl. l10n_in)</a></li>
+    <li><a href="{{ '/modules/#edi' | relative_url }}">EDI / e-invoice / e-way</a></li>
+    <li><a href="{{ '/modules/#website' | relative_url }}">Website / e-commerce</a></li>
+  </ul>
+  <p class="sidebar-note">
+    Every module has its own page — generated from
+    <code>agents/modules/generated/&lt;name&gt;.yaml</code> +
+    <code>knowledge/modules/&lt;name&gt;/overview.md</code>.
+  </p>
+</div>
+
+<div class="sidebar-section">
+  <h3>Platform SMEs</h3>
+  <ul>
+    {% assign platform_pages = site.pages | where: "layout", "platform-page" | sort: "nav_order" %}
+    {% for p in platform_pages %}
+      <li><a href="{{ p.url | relative_url }}">{{ p.nav_title | default: p.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="sidebar-section">
+  <h3>Custom addons</h3>
+  <ul>
+    {% assign custom_pages = site.pages | where: "layout", "custom-page" | sort: "nav_order" %}
+    {% for p in custom_pages %}
+      <li><a href="{{ p.url | relative_url }}">{{ p.nav_title | default: p.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

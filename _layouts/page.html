@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  {% favicon %}🛒{% endfavicon %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-mark">🛒</span>
+        <span class="brand-text">{{ site.title }}</span>
+      </a>
+      <nav class="site-nav">
+        <a href="{{ '/architecture/' | relative_url }}">Architecture</a>
+        <a href="{{ '/flows/' | relative_url }}">End-to-end flows</a>
+        <a href="{{ '/modules/' | relative_url }}">Modules</a>
+        <a href="{{ '/platform/' | relative_url }}">Platform SMEs</a>
+        <a href="{{ '/custom-addons/' | relative_url }}">Custom addons</a>
+        <a href="{{ '/decisions/' | relative_url }}">Decision log</a>
+        <a href="{{ '/reference/' | relative_url }}">Reference</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <aside class="sidebar">
+      {% include sidebar.html %}
+    </aside>
+    <article class="content">
+      <h1 class="page-title">{{ page.title | default: site.title }}</h1>
+      {% if page.subtitle %}<p class="page-subtitle">{{ page.subtitle }}</p>{% endif %}
+      {{ content }}
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>
+        {{ site.title }} ·
+        Built from the in-tree knowledge base
+        (<code>agents/modules/generated/*.yaml</code>,
+         <code>knowledge/modules/*/overview.md</code>,
+         <code>agents/platform/*.yaml</code>,
+         <code>knowledge/conversations/*.json</code>).
+        See <a href="{{ 'https://github.com/ai-native-erp/erp-agents' | escape }}">github.com/ai-native-erp/erp-agents</a>.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

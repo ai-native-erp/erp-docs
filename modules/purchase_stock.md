@@ -1,0 +1,219 @@
+---
+layout: page
+title: "Purchase Stock (purchase_stock)"
+subtitle: "Odoo 17 module profile — owner, dependencies, models, learnings."
+permalink: /modules/purchase_stock/
+nav_order: 0
+---
+# Purchase Stock — `purchase_stock`
+
+**Source:** [`agents/modules/generated/purchase_stock.yaml`](../../agents/modules/generated/purchase_stock.yaml) · **Wiki:** [`knowledge/modules/purchase_stock/overview.md`](../../knowledge/modules/purchase_stock/overview.md)
+
+<div class="meta-grid">
+<div class="meta-card"><div class="k">Module</div><div class="v"><code>purchase_stock</code></div></div>
+<div class="meta-card"><div class="k">Title</div><div class="v">Purchase Stock</div></div>
+<div class="meta-card"><div class="k">Domain</div><div class="v">inventory_purchase</div></div>
+<div class="meta-card"><div class="k">Application</div><div class="v">False</div></div>
+<div class="meta-card"><div class="k">License</div><div class="v">LGPL-3</div></div>
+<div class="meta-card"><div class="k">Source path</div><div class="v"><code>addons/purchase_stock</code></div></div>
+<div class="meta-card"><div class="k">Upstream revision</div><div class="v"><a href="https://github.com/odoo/odoo/tree/126b5bdd1e85771549198976f8570cd2ff167608/addons/purchase_stock"><code>126b5bd</code></a></div></div>
+</div>
+## Purpose
+
+Purchase Orders, Receipts, Vendor Bills for Stock
+
+## Direct dependencies
+
+[`purchase`](purchase.md), [`stock_account`](stock_account.md)
+
+## Reverse dependencies (modules that depend on this)
+
+[`l10n_in_purchase_stock`](l10n_in_purchase_stock.md), [`purchase_mrp`](purchase_mrp.md), [`purchase_requisition_stock`](purchase_requisition_stock.md), [`sale_purchase_stock`](sale_purchase_stock.md), [`spreadsheet_dashboard_purchase_stock`](spreadsheet_dashboard_purchase_stock.md), [`stock_landed_costs`](stock_landed_costs.md), [`test_main_flows`](test_main_flows.md)
+
+## Models defined by this module
+
+<div class="model-list">
+<div class="model"><div class="name"><code>product.product</code></div><div class="role">defined by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>product.template</code></div><div class="role">defined by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>vendor.delay.report</code></div><div class="role">defined by <code>purchase_stock</code></div></div>
+</div>
+
+## Models extended by this module
+
+<div class="model-list">
+<div class="model"><div class="name"><code>account.move</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>account.move.line</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>procurement.group</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>product.category</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>product.product</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>product.replenish</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>product.supplierinfo</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>product.template</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>purchase.order</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>purchase.order.line</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>purchase.report</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>report.stock.report_stock_rule</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>res.company</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>res.config.settings</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>res.partner</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>stock.forecasted_product_product</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>stock.lot</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>stock.move</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>stock.picking</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>stock.replenishment.info</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>stock.replenishment.option</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>stock.return.picking</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>stock.rule</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>stock.valuation.layer</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>stock.warehouse</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+<div class="model"><div class="name"><code>stock.warehouse.orderpoint</code></div><div class="role">extended by <code>purchase_stock</code></div></div>
+</div>
+
+## Related SME agents (top 10)
+
+| Agent | Relationships | Profile |
+|---|---|---|
+| `module.account` | extends_model_from, model_extended_by | `agents/modules/generated/account.yaml` |
+| `module.base` | extends_model_from | `agents/modules/generated/base.yaml` |
+| `module.crm` | extends_model_from | `agents/modules/generated/crm.yaml` |
+| `module.event_booth_sale` | model_extended_by | `agents/modules/generated/event_booth_sale.yaml` |
+| `module.event_sale` | model_extended_by | `agents/modules/generated/event_sale.yaml` |
+| `module.hr_expense` | model_extended_by | `agents/modules/generated/hr_expense.yaml` |
+| `module.l10n_cl` | extends_model_from | `agents/modules/generated/l10n_cl.yaml` |
+| `module.l10n_de` | model_extended_by | `agents/modules/generated/l10n_de.yaml` |
+| `module.l10n_eg_edi_eta` | model_extended_by | `agents/modules/generated/l10n_eg_edi_eta.yaml` |
+| `module.l10n_gcc_invoice` | model_extended_by | `agents/modules/generated/l10n_gcc_invoice.yaml` |
+
+## Full wiki excerpt
+
+- SME owner: [`module.purchase_stock`](../../../agents/modules/generated/purchase_stock.yaml)
+- Domain: `inventory_purchase`
+- Category: Inventory/Purchase
+- Source revision: [`126b5bdd1e85`](https://github.com/odoo/odoo/tree/126b5bdd1e85771549198976f8570cd2ff167608/addons/purchase_stock)
+- Direct dependencies: [`purchase`](../purchase/overview.md), [`stock_account`](../stock_account/overview.md)
+- Declared license: `LGPL-3`; architecture review: [`platform.licensing-commercial-boundaries`](../../base-platform/licensing-commercial-boundaries.md)
+- Reverse dependencies: [`l10n_in_purchase_stock`](../l10n_in_purchase_stock/overview.md), [`purchase_mrp`](../purchase_mrp/overview.md), [`purchase_requisition_stock`](../purchase_requisition_stock/overview.md), [`sale_purchase_stock`](../sale_purchase_stock/overview.md), [`spreadsheet_dashboard_purchase_stock`](../spreadsheet_dashboard_purchase_stock/overview.md), [`stock_landed_costs`](../stock_landed_costs/overview.md), [`test_main_flows`](../test_main_flows/overview.md)
+- Impact graph: [`module:purchase_stock`](../../impact-graph.json)
+
+## Purpose
+
+Purchase Orders, Receipts, Vendor Bills for Stock
+
+## Model relationships
+
+- `product.product` — extended by [`account`](../account/overview.md), [`event_booth_sale`](../event_booth_sale/overview.md), [`event_sale`](../event_sale/overview.md), [`hr_expense`](../hr_expense/overview.md), [`l10n_eg_edi_eta`](../l10n_eg_edi_eta/overview.md), [`l10n_gcc_invoice`](../l10n_gcc_invoice/overview.md), [`loyalty`](../loyalty/overview.md), [`mrp`](../mrp/overview.md), [`mrp_account`](../mrp_account/overview.md), [`mrp_subcontracting`](../mrp_subcontracting/overview.md), [`mrp_subcontracting_account`](../mrp_subcontracting_account/overview.md), [`point_of_sale`](../point_of_sale/overview.md), [`pos_sale_product_configurator`](../pos_sale_product_configurator/overview.md), [`pos_self_order`](../pos_self_order/overview.md), [`pos_self_order_sale`](../pos_self_order_sale/overview.md), [`product`](../product/overview.md), [`product_expiry`](../product_expiry/overview.md), [`product_images`](../product_images/overview.md), [`product_margin`](../product_margin/overview.md), [`purchase`](../purchase/overview.md), [`purchase_requisition`](../purchase_requisition/overview.md), [`repair`](../repair/overview.md), [`sale`](../sale/overview.md), [`sale_project`](../sale_project/overview.md), [`sale_timesheet`](../sale_timesheet/overview.md), [`stock`](../stock/overview.md), [`stock_account`](../stock_account/overview.md), [`website_event_booth_sale`](../website_event_booth_sale/overview.md), [`website_event_sale`](../website_event_sale/overview.md), [`website_sale`](../website_sale/overview.md), [`website_sale_comparison`](../website_sale_comparison/overview.md), [`website_sale_slides`](../website_sale_slides/overview.md), [`website_sale_stock`](../website_sale_stock/overview.md), [`website_sale_wishlist`](../website_sale_wishlist/overview.md)
+- `product.template` — extended by [`account`](../account/overview.md), [`event_booth_sale`](../event_booth_sale/overview.md), [`event_sale`](../event_sale/overview.md), [`hr_expense`](../hr_expense/overview.md), [`l10n_de`](../l10n_de/overview.md), [`l10n_eg_edi_eta`](../l10n_eg_edi_eta/overview.md), [`l10n_hu_edi`](../l10n_hu_edi/overview.md), [`l10n_id_efaktur_coretax`](../l10n_id_efaktur_coretax/overview.md), [`l10n_in`](../l10n_in/overview.md), [`l10n_my_edi`](../l10n_my_edi/overview.md), [`l10n_pl`](../l10n_pl/overview.md), [`l10n_ro_cpv_code`](../l10n_ro_cpv_code/overview.md), [`loyalty`](../loyalty/overview.md), [`membership`](../membership/overview.md), [`mrp`](../mrp/overview.md), [`mrp_account`](../mrp_account/overview.md), [`point_of_sale`](../point_of_sale/overview.md), [`pos_self_order`](../pos_self_order/overview.md), [`product`](../product/overview.md), [`product_email_template`](../product_email_template/overview.md), [`product_expiry`](../product_expiry/overview.md), [`product_matrix`](../product_matrix/overview.md), [`purchase`](../purchase/overview.md), [`repair`](../repair/overview.md), [`sale`](../sale/overview.md), [`sale_expense`](../sale_expense/overview.md), [`sale_product_configurator`](../sale_product_configurator/overview.md), [`sale_product_matrix`](../sale_product_matrix/overview.md), [`sale_project`](../sale_project/overview.md), [`sale_purchase`](../sale_purchase/overview.md), [`sale_stock`](../sale_stock/overview.md), [`sale_timesheet`](../sale_timesheet/overview.md), [`stock`](../stock/overview.md), [`stock_account`](../stock_account/overview.md), [`stock_delivery`](../stock_delivery/overview.md), [`stock_landed_costs`](../stock_landed_costs/overview.md), [`website_event_booth_sale`](../website_event_booth_sale/overview.md), [`website_event_sale`](../website_event_sale/overview.md), [`website_sale`](../website_sale/overview.md), [`website_sale_slides`](../website_sale_slides/overview.md), [`website_sale_stock`](../website_sale_stock/overview.md), [`website_sale_stock_wishlist`](../website_sale_stock_wishlist/overview.md), [`website_sale_wishlist`](../website_sale_wishlist/overview.md)
+- `vendor.delay.report`
+- Extends `account.move` — defined by [`account`](../account/overview.md), [`l10n_tr_nilvera_einvoice`](../l10n_tr_nilvera_einvoice/overview.md), [`sale`](../sale/overview.md)
+- Extends `account.move.line` — defined by [`account`](../account/overview.md)
+- Extends `procurement.group` — defined by [`stock`](../stock/overview.md)
+- Extends `product.category` — defined by [`product`](../product/overview.md)
+- Extends `product.product` — defined by [`mrp_account`](../mrp_account/overview.md), [`product`](../product/overview.md), [`purchase`](../purchase/overview.md)
+- Extends `product.replenish` — defined by [`stock`](../stock/overview.md)
+- Extends `product.supplierinfo` — defined by [`product`](../product/overview.md)
+- Extends `product.template` — defined by [`mrp_account`](../mrp_account/overview.md), [`product`](../product/overview.md), [`purchase`](../purchase/overview.md), [`stock_account`](../stock_account/overview.md), [`website_sale`](../website_sale/overview.md)
+- Extends `purchase.order` — defined by [`purchase`](../purchase/overview.md)
+- Extends `purchase.order.line` — defined by [`purchase`](../purchase/overview.md)
+- Extends `purchase.report` — defined by [`purchase`](../purchase/overview.md)
+- Extends `report.stock.report_stock_rule` — defined by [`stock`](../stock/overview.md)
+- Extends `res.company` — defined by [`account`](../account/overview.md), [`base`](../base/overview.md), [`l10n_it_edi`](../l10n_it_edi/overview.md), [`l10n_sg`](../l10n_sg/overview.md), [`mail`](../mail/overview.md), [`partner_autocomplete`](../partner_autocomplete/overview.md)
+- Extends `res.config.settings` — defined by [`base`](../base/overview.md)
+- Extends `res.partner` — defined by [`account`](../account/overview.md), [`base`](../base/overview.md), [`crm`](../crm/overview.md), [`l10n_cl`](../l10n_cl/overview.md), [`l10n_it_edi`](../l10n_it_edi/overview.md), [`l10n_sg`](../l10n_sg/overview.md), [`l10n_tr_nilvera`](../l10n_tr_nilvera/overview.md), [`mail`](../mail/overview.md), [`partner_autocomplete`](../partner_autocomplete/overview.md), [`phone_validation`](../phone_validation/overview.md), [`purchase`](../purchase/overview.md), [`sms`](../sms/overview.md), [`test_access_rights`](../test_access_rights/overview.md), [`website`](../website/overview.md), [`website_partner`](../website_partner/overview.md)
+- Extends `stock.forecasted_product_product` — defined by [`stock`](../stock/overview.md)
+- Extends `stock.lot` — defined by [`stock`](../stock/overview.md)
+- Extends `stock.move` — defined by [`stock`](../stock/overview.md)
+- Extends `stock.picking` — defined by [`mrp_subcontracting`](../mrp_subcontracting/overview.md), [`stock`](../stock/overview.md)
+- Extends `stock.replenishment.info` — defined by [`stock`](../stock/overview.md)
+- Extends `stock.replenishment.option` — defined by [`stock`](../stock/overview.md)
+- Extends `stock.return.picking` — defined by [`stock`](../stock/overview.md)
+- Extends `stock.rule` — defined by [`stock`](../stock/overview.md)
+- Extends `stock.valuation.layer` — defined by [`stock_account`](../stock_account/overview.md)
+- Extends `stock.warehouse` — defined by [`stock`](../stock/overview.md)
+- Extends `stock.warehouse.orderpoint` — defined by [`stock`](../stock/overview.md)
+
+## Related SME agents
+
+- [`module.account`](../../../agents/modules/generated/account.yaml) — extends_model_from, model_extended_by
+- [`module.base`](../../../agents/modules/generated/base.yaml) — extends_model_from
+- [`module.crm`](../../../agents/modules/generated/crm.yaml) — extends_model_from
+- [`module.event_booth_sale`](../../../agents/modules/generated/event_booth_sale.yaml) — model_extended_by
+- [`module.event_sale`](../../../agents/modules/generated/event_sale.yaml) — model_extended_by
+- [`module.hr_expense`](../../../agents/modules/generated/hr_expense.yaml) — model_extended_by
+- [`module.l10n_cl`](../../../agents/modules/generated/l10n_cl.yaml) — extends_model_from
+- [`module.l10n_de`](../../../agents/modules/generated/l10n_de.yaml) — model_extended_by
+- [`module.l10n_eg_edi_eta`](../../../agents/modules/generated/l10n_eg_edi_eta.yaml) — model_extended_by
+- [`module.l10n_gcc_invoice`](../../../agents/modules/generated/l10n_gcc_invoice.yaml) — model_extended_by
+- [`module.l10n_hu_edi`](../../../agents/modules/generated/l10n_hu_edi.yaml) — model_extended_by
+- [`module.l10n_id_efaktur_coretax`](../../../agents/modules/generated/l10n_id_efaktur_coretax.yaml) — model_extended_by
+- [`module.l10n_in`](../../../agents/modules/generated/l10n_in.yaml) — model_extended_by
+- [`module.l10n_in_purchase_stock`](../../../agents/modules/generated/l10n_in_purchase_stock.yaml) — required_by
+- [`module.l10n_it_edi`](../../../agents/modules/generated/l10n_it_edi.yaml) — extends_model_from
+- [`module.l10n_my_edi`](../../../agents/modules/generated/l10n_my_edi.yaml) — model_extended_by
+- [`module.l10n_pl`](../../../agents/modules/generated/l10n_pl.yaml) — model_extended_by
+- [`module.l10n_ro_cpv_code`](../../../agents/modules/generated/l10n_ro_cpv_code.yaml) — model_extended_by
+- [`module.l10n_sg`](../../../agents/modules/generated/l10n_sg.yaml) — extends_model_from
+- [`module.l10n_tr_nilvera`](../../../agents/modules/generated/l10n_tr_nilvera.yaml) — extends_model_from
+- [`module.l10n_tr_nilvera_einvoice`](../../../agents/modules/generated/l10n_tr_nilvera_einvoice.yaml) — extends_model_from
+- [`module.loyalty`](../../../agents/modules/generated/loyalty.yaml) — model_extended_by
+- [`module.mail`](../../../agents/modules/generated/mail.yaml) — extends_model_from
+- [`module.membership`](../../../agents/modules/generated/membership.yaml) — model_extended_by
+- [`module.mrp`](../../../agents/modules/generated/mrp.yaml) — model_extended_by
+- [`module.mrp_account`](../../../agents/modules/generated/mrp_account.yaml) — extends_model_from, model_extended_by
+- [`module.mrp_subcontracting`](../../../agents/modules/generated/mrp_subcontracting.yaml) — extends_model_from, model_extended_by
+- [`module.mrp_subcontracting_account`](../../../agents/modules/generated/mrp_subcontracting_account.yaml) — model_extended_by
+- [`module.partner_autocomplete`](../../../agents/modules/generated/partner_autocomplete.yaml) — extends_model_from
+- [`module.phone_validation`](../../../agents/modules/generated/phone_validation.yaml) — extends_model_from
+- [`module.point_of_sale`](../../../agents/modules/generated/point_of_sale.yaml) — model_extended_by
+- [`module.pos_sale_product_configurator`](../../../agents/modules/generated/pos_sale_product_configurator.yaml) — model_extended_by
+- [`module.pos_self_order`](../../../agents/modules/generated/pos_self_order.yaml) — model_extended_by
+- [`module.pos_self_order_sale`](../../../agents/modules/generated/pos_self_order_sale.yaml) — model_extended_by
+- [`module.product`](../../../agents/modules/generated/product.yaml) — extends_model_from, model_extended_by
+- [`module.product_email_template`](../../../agents/modules/generated/product_email_template.yaml) — model_extended_by
+- [`module.product_expiry`](../../../agents/modules/generated/product_expiry.yaml) — model_extended_by
+- [`module.product_images`](../../../agents/modules/generated/product_images.yaml) — model_extended_by
+- [`module.product_margin`](../../../agents/modules/generated/product_margin.yaml) — model_extended_by
+- [`module.product_matrix`](../../../agents/modules/generated/product_matrix.yaml) — model_extended_by
+- [`module.purchase`](../../../agents/modules/generated/purchase.yaml) — depends_on, extends_model_from, model_extended_by
+- [`module.purchase_mrp`](../../../agents/modules/generated/purchase_mrp.yaml) — required_by
+- [`module.purchase_requisition`](../../../agents/modules/generated/purchase_requisition.yaml) — model_extended_by
+- [`module.purchase_requisition_stock`](../../../agents/modules/generated/purchase_requisition_stock.yaml) — required_by
+- [`module.repair`](../../../agents/modules/generated/repair.yaml) — model_extended_by
+- [`module.sale`](../../../agents/modules/generated/sale.yaml) — extends_model_from, model_extended_by
+- [`module.sale_expense`](../../../agents/modules/generated/sale_expense.yaml) — model_extended_by
+- [`module.sale_product_configurator`](../../../agents/modules/generated/sale_product_configurator.yaml) — model_extended_by
+- [`module.sale_product_matrix`](../../../agents/modules/generated/sale_product_matrix.yaml) — model_extended_by
+- [`module.sale_project`](../../../agents/modules/generated/sale_project.yaml) — model_extended_by
+- [`module.sale_purchase`](../../../agents/modules/generated/sale_purchase.yaml) — model_extended_by
+- [`module.sale_purchase_stock`](../../../agents/modules/generated/sale_purchase_stock.yaml) — required_by
+- [`module.sale_stock`](../../../agents/modules/generated/sale_stock.yaml) — model_extended_by
+- [`module.sale_timesheet`](../../../agents/modules/generated/sale_timesheet.yaml) — model_extended_by
+- [`module.sms`](../../../agents/modules/generated/sms.yaml) — extends_model_from
+- [`module.spreadsheet_dashboard_purchase_stock`](../../../agents/modules/generated/spreadsheet_dashboard_purchase_stock.yaml) — required_by
+- [`module.stock`](../../../agents/modules/generated/stock.yaml) — extends_model_from, model_extended_by
+- [`module.stock_account`](../../../agents/modules/generated/stock_account.yaml) — depends_on, extends_model_from, model_extended_by
+- [`module.stock_delivery`](../../../agents/modules/generated/stock_delivery.yaml) — model_extended_by
+- [`module.stock_landed_costs`](../../../agents/modules/generated/stock_landed_costs.yaml) — model_extended_by, required_by
+- [`module.test_access_rights`](../../../agents/modules/generated/test_access_rights.yaml) — extends_model_from
+- [`module.test_main_flows`](../../../agents/modules/generated/test_main_flows.yaml) — required_by
+- [`module.website`](../../../agents/modules/generated/website.yaml) — extends_model_from
+- [`module.website_event_booth_sale`](../../../agents/modules/generated/website_event_booth_sale.yaml) — model_extended_by
+- [`module.website_event_sale`](../../../agents/modules/generated/website_event_sale.yaml) — model_extended_by
+- [`module.website_partner`](../../../agents/modules/generated/website_partner.yaml) — extends_model_from
+- [`module.website_sale`](../../../agents/modules/generated/website_sale.yaml) — extends_model_from, model_extended_by
+- [`module.website_sale_comparison`](../../../agents/modules/generated/website_sale_comparison.yaml) — model_extended_by
+- [`module.website_sale_slides`](../../../agents/modules/generated/website_sale_slides.yaml) — model_extended_by
+- [`module.website_sale_stock`](../../../agents/modules/generated/website_sale_stock.yaml) — model_extended_by
+- [`module.website_sale_stock_wishlist`](../../../agents/modules/generated/website_sale_stock_wishlist.yaml) — model_extended_by
+- [`module.website_sale_wishlist`](../../../agents/modules/generated/website_sale_wishlist.yaml) — model_extended_by
+
+## Regression impact checklist
+
+- Review 7 direct dependent module(s) and bounded transitive dependents in `knowledge/impact-index.json`.
+- Review modules extending owned models: [`account`](../account/overview.md), [`event_booth_sale`](../event_booth_sale/overview.md), [`event_sale`](../event_sale/overview.md), [`hr_expense`](../hr_expense/overview.md), [`l10n_de`](../l10n_de/overview.md), [`l10n_eg_edi_eta`](../l10n_eg_edi_eta/overview.md), [`l10n_gcc_invoice`](../l10n_gcc_invoice/overview.md), [`l10n_hu_edi`](../l10n_hu_edi/overview.md), [`l10n_id_efaktur_coretax`](../l10n_id_efaktur_coretax/overview.md), [`l10n_in`](../l10n_in/overview.md), [`l10n_my_edi`](../l10n_my_edi/overview.md), [`l10n_pl`](../l10n_pl/overview.md), [`l10n_ro_cpv_code`](../l10n_ro_cpv_code/overview.md), [`loyalty`](../loyalty/overview.md), [`membership`](../membership/overview.md), [`mrp`](../mrp/overview.md), [`mrp_account`](../mrp_account/overview.md), [`mrp_subcontracting`](../mrp_subcontracting/overview.md), [`mrp_subcontracting_account`](../mrp_subcontracting_account/overview.md), [`point_of_sale`](../point_of_sale/overview.md), [`pos_sale_product_configurator`](../pos_sale_product_configurator/overview.md), [`pos_self_order`](../pos_self_order/overview.md), [`pos_self_order_sale`](../pos_self_order_sale/overview.md), [`product`](../product/overview.md), [`product_email_template`](../product_email_template/overview.md), [`product_expiry`](../product_expiry/overview.md), [`product_images`](../product_images/overview.md), [`product_margin`](../product_margin/overview.md), [`product_matrix`](../product_matrix/overview.md), [`purchase`](../purchase/overview.md), [`purchase_requisition`](../purchase_requisition/overview.md), [`repair`](../repair/overview.md), [`sale`](../sale/overview.md), [`sale_expense`](../sale_expense/overview.md), [`sale_product_configurator`](../sale_product_configurator/overview.md), [`sale_product_matrix`](../sale_product_matrix/overview.md), [`sale_project`](../sale_project/overview.md), [`sale_purchase`](../sale_purchase/overview.md), [`sale_stock`](../sale_stock/overview.md), [`sale_timesheet`](../sale_timesheet/overview.md), [`stock`](../stock/overview.md), [`stock_account`](../stock_account/overview.md), [`stock_delivery`](../stock_delivery/overview.md), [`stock_landed_costs`](../stock_landed_costs/overview.md), [`website_event_booth_sale`](../website_event_booth_sale/overview.md), [`website_event_sale`](../website_event_sale/overview.md), [`website_sale`](../website_sale/overview.md), [`website_sale_comparison`](../website_sale_comparison/overview.md), [`website_sale_slides`](../website_sale_slides/overview.md), [`website_sale_stock`](../website_sale_stock/overview.md), [`website_sale_stock_wishlist`](../website_sale_stock_wishlist/overview.md), [`website_sale_wishlist`](../website_sale_wishlist/overview.md).
+- Review model owners used by this module: [`account`](../account/overview.md), [`base`](../base/overview.md), [`crm`](../crm/overview.md), [`l10n_cl`](../l10n_cl/overview.md), [`l10n_it_edi`](../l10n_it_edi/overview.md), [`l10n_sg`](../l10n_sg/overview.md), [`l10n_tr_nilvera`](../l10n_tr_nilvera/overview.md), [`l10n_tr_nilvera_einvoice`](../l10n_tr_nilvera_einvoice/overview.md), [`mail`](../mail/overview.md), [`mrp_account`](../mrp_account/overview.md), [`mrp_subcontracting`](../mrp_subcontracting/overview.md), [`partner_autocomplete`](../partner_autocomplete/overview.md), [`phone_validation`](../phone_validation/overview.md), [`product`](../product/overview.md), [`purchase`](../purchase/overview.md), [`sale`](../sale/overview.md), [`sms`](../sms/overview.md), [`stock`](../stock/overview.md), [`stock_account`](../stock_account/overview.md), [`test_access_rights`](../test_access_rights/overview.md), [`website`](../website/overview.md), [`website_partner`](../website_partner/overview.md), [`website_sale`](../website_sale/overview.md).
+- Required specialist reviewers: security_reviewer, frontend_owl.
+- Run this module’s tests plus affected downstream tests before upgrade.
+
+## Learnings
+
+Canonical learnings live in [`learnings.yaml`](learnings.yaml). Cross-wiki relationships use stable module and learning IDs.
