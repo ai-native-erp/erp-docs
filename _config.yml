@@ -1,6 +1,8 @@
 title: Retail ERP Reference — Odoo 17 + CMR
 description: End-to-end architecture, modules, addons, data models and flows for the Odoo 17 + CMR retail ERP deployment.
 theme: jekyll-theme-cayman
+baseurl: /erp-docs
+url: https://ai-native-erp.github.io
 markdown: kramdown
 kramdown:
   syntax_highlighter: rouge
